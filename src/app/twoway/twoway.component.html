@@ -1,0 +1,36 @@
+<div class="container-fluid bg-danger">
+    <div class="container bg-info">
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-5 bg-warning">
+          <h2>TWOWAY DATA BINDING</h2>
+          <form name="login" #login="ngForm" (ngSubmit)="logints(login.value)">
+              <label for="text">First Name :</label>
+            <input type="text"  class="form-control" required name="fName" [(ngModel)]=result.fname><br>
+            <label for="text">Last Name :</label>
+            <input type="text"  class="form-control" required  name="lName" [(ngModel)]=result.lname><br>
+            <label for="Number">Roll Number:</label>
+            <input type="text"  class="form-control" required name="roll" [(ngModel)]=result.roll><br>
+            <label for="email">Email address:</label>
+            <input type="text"  class="form-control" required name="email" [(ngModel)]=result.email><br>
+            <label for="pass">Password:</label>
+            <input type="text"  class="form-control" required name="pass" [(ngModel)]=result.pass>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-5 bg-warning text-center">
+            <button  type="submit" class="btn btn-primary">Submit</button>
+            &nbsp;<button type="button" class="btn btn-dark"><a routerLink="/index">ONE Way</a></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  
+   <div class="container bg-dark">
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center bg-info">
+  {{result.fname}}<br>
+  {{result.lname}}<br>
+  {{result.roll}}<br>
+  {{result.email}}<br>
+  {{result.pass}}<br>
+  </div>
+  </div>
